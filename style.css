@@ -11,8 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-size: 2rem;
-  background-color: black;
-  /* background: linear-gradient(326deg, rgba(0, 245, 203, 1) 0%, rgba(9, 82, 121, 1) 50%, rgba(237, 0, 255, 1) 100%); */
+  background: linear-gradient(150deg, rgba(0, 0, 0, 1) 0%, rgba(0, 219, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 #card {
@@ -22,6 +21,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.animation {
+  animation: rotation_special_card 3s normal;
 }
 
 #card::before {
@@ -62,4 +65,12 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-@keyframes hello {}
+@keyframes rotation_special_card {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
